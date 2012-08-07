@@ -1258,7 +1258,8 @@
 
                 this.search.val(placeholder).addClass("select2-default");
                 // stretch the search box to full width of the container so as much of the placeholder is visible as possible
-                this.search.width(this.getContainerWidth());
+                // Fixed: Percent-based input sizing with placeholder: https://github.com/ivaynberg/select2/commit/a4d496281a77aecd11b42c087838e494dd4d5522
+                this.search.width(this.container.width());
             } else {
                 this.search.val("").width(10);
             }
